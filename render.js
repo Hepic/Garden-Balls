@@ -13,6 +13,9 @@ function draw_background()
     
     draw_background();
     draw_bars();
+
+    requestAnimationFrame(render);
 })();
+
 
 
