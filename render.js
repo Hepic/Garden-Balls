@@ -13,6 +13,10 @@ function draw_background()
     
     draw_background();
     draw_bars();
+    ball.move();
+    ball.draw();
+    
+    collision_bar_ball();
 
     requestAnimationFrame(render);
 })();
