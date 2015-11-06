@@ -69,3 +69,14 @@ function collision_bar_ball()
         }
     }
 }
+
+function collision_ball_window()
+{
+    if(ball.x < 0 || ball.x > W || ball.y < 0 || ball.y > H) //if out of bounds
+    {
+	ball.x = W/2; //reset ball
+        ball.y = H/2;
+        ball.oob = 1;
+    }
+}
+

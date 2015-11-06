@@ -2,10 +2,11 @@ function Ball(x, y)
 {
     this.x = x;
     this.y = y;
-    this.color = 'yellow';
+    this.color = 'black';
     this.radius = 10;
-    this.dx = 5;
-    this.dy = 5;
+    this.dx = 3;
+    this.dy = 3;
+    this.oob = 0;
 }
 
 Ball.prototype = {
@@ -25,5 +26,6 @@ Ball.prototype = {
 };
 
 
-var ball = new Ball(200, 200);
+var ball = new Ball(W/2, H/2);
+
 

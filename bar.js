@@ -2,9 +2,9 @@ function Bar(x, y, type)
 {
     this.x = x;
     this.y = y;
-    this.width = 80;
-    this.height = 10;
-    this.color = 'red';
+    this.width = 100;
+    this.height = 15;
+    this.color = 'blue';
     this.type = type;
 }
 
@@ -51,4 +51,5 @@ function draw_bars()
     for(var i=0; i<bars.length; ++i)
         bars[i].draw();
 }
+
 
