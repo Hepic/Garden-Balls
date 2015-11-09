@@ -2,7 +2,7 @@ function Bar(x, y, type)
 {
     this.x = x;
     this.y = y;
-    this.width = 80;
+    this.width = 100;
     this.height = 10;
     this.color = 'red';
     this.type = type;

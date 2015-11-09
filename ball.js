@@ -4,7 +4,7 @@ function Ball(x, y)
     this.y = y;
     this.color = 'yellow';
     this.radius = 10;
-    this.dx = 5;
+    this.dx = 0;
     this.dy = 5;
 }
 
@@ -25,5 +25,5 @@ Ball.prototype = {
 };
 
 
-var ball = new Ball(200, 200);
+var ball = new Ball(W/2, H/2);
 
