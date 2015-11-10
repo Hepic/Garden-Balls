@@ -6,13 +6,13 @@ function draw_background()
     ctx.fill();
 }
 
-
 (function render()
 {
     ctx.clearRect(0, 0, W, H);   
     
     draw_background();
     draw_bars();
+    move_bars();
     
     ball.move();
     ball.draw();
