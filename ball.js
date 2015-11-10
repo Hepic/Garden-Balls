@@ -4,7 +4,7 @@ function Ball(x, y)
     this.y = y;
     this.color = 'yellow';
     this.radius = 10;
-    this.dx = 0;
+    this.dx = 5;
     this.dy = 5;
 }
 
