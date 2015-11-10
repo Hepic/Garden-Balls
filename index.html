@@ -3,13 +3,19 @@
 <html>
     <head>
         <title>Garden Ball</title>
+        <link rel='stylesheet' type='text/css' href='menuStyle.css' />
     </head>
 
     <body>
+        <div id='menuContainer'>
+            <span id='start_game'>Start Game</span>
+            <span id='options'>Options</span>
+            <span id='quit'>Quit</span>
+        </div>
+
         <canvas id='cnv' width='1000' height='650'></canvas>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
         <script type='text/javascript' src='declare_variables.js'></script>
         <script type='text/javascript' src='ball.js'></script>
         <script type='text/javascript' src='bar.js'></script>

@@ -1,0 +1,45 @@
+body
+{
+    background-color: black;
+    
+    margin: 0;
+    padding: 0;
+}
+
+
+div#menuContainer
+{
+    position: absolute;
+    left: 35%;
+
+    width: 30%;
+    height: 100%;
+
+    background-color: orange;
+    
+    overflow-x: hidden;
+}
+
+
+#menuContainer span
+{
+    position: relative;
+
+    top: 15%;
+    text-align: center;
+    
+    font-size: 30px;
+
+    display: block;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+
+#menuContainer span:hover
+{
+    color: white;
+    
+    transition: 0.5s;
+    transform: rotate(-2deg);
+}

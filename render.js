@@ -7,7 +7,7 @@ function draw_background()
 }
 
 
-(function render()
+function render()
 {
     ctx.clearRect(0, 0, W, H);   
     
@@ -21,7 +21,11 @@ function draw_background()
     ball_out_of_window();
 
     requestAnimationFrame(render);
-})();
+};
+
+
+if(run_game)
+    render();
 
 
 
