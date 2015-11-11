@@ -13,12 +13,11 @@ function render()
     
     draw_background();
     draw_bars();
+    move_bars();
     
     ball.move();
     ball.draw();
 
-    move_bars();
-    
     collision_bar_ball();
     ball_out_of_window();
 

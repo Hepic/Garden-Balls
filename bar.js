@@ -31,11 +31,8 @@ Bar.prototype = {
 
     move: function()
     {
-        if(this.type == 'h')
-	    this.x += this.dx;
-
-        if(this.type == 'v')
-            this.y += this.dy;
+	this.x += this.dx;
+        this.y += this.dy;
     }
 }
 
