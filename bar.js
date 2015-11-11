@@ -6,6 +6,8 @@ function Bar(x, y, type)
     this.height = 10;
     this.color = 'red';
     this.type = type;
+    this.dx = 0;
+    this.dy = 0;
 }
 
 Bar.prototype = {
@@ -25,6 +27,15 @@ Bar.prototype = {
             this.width = this.height;
             this.height = temp;
         }
+    },
+
+    move: function()
+    {
+        if(this.type == 'h')
+	    this.x += this.dx;
+
+        if(this.type == 'v')
+            this.y += this.dy;
     }
 }
 
@@ -50,5 +61,11 @@ function draw_bars()
 {
     for(var i=0; i<bars.length; ++i)
         bars[i].draw();
+}
+
+function move_bars()
+{
+    for(var i=0; i<bars.length; ++i)
+        bars[i].move();
 }
 

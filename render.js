@@ -16,6 +16,8 @@ function render()
     
     ball.move();
     ball.draw();
+
+    move_bars();
     
     collision_bar_ball();
     ball_out_of_window();
