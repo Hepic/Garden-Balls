@@ -23,6 +23,5 @@
         <script type='text/javascript' src='controller.js'></script>
         <script type='text/javascript' src='collision.js'></script>
         <script type='text/javascript' src='render.js'></script>
-	<script type='text/javascript' src='effects.js'></script>
    </body>
 </html>
