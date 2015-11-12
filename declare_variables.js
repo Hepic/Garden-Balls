@@ -1,5 +1,5 @@
 var canvas = document.getElementById('cnv');
 var ctx = canvas.getContext('2d');
-var W = canvas.width, H = canvas.height;
-var run_game = false;
+var W1 = 200, W = canvas.width - 200, H = canvas.height;
+var run_game = false, time_sec = 0;
 

@@ -4,6 +4,11 @@ function draw_background()
     ctx.rect(0, 0, W, H);
     ctx.fillStyle = 'cyan';
     ctx.fill();
+
+    ctx.beginPath();
+    ctx.rect(W, 0, W1, H);
+    ctx.fillStyle = '#669999';
+    ctx.fill();
 }
 
 
@@ -19,7 +24,9 @@ function render()
     
     collision_bar_ball();
     ball_out_of_window();
-
+    
+    show_time(W + 20, 30)
+    
     requestAnimationFrame(render);
 };
 
