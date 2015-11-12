@@ -33,6 +33,8 @@ function collision_bar_ball()
 
             else if(bars[i].type == 'v') // vertical bar
                 ball.dx *= -1;
+
+            audio();
         }
     }
 }
