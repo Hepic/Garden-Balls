@@ -22,8 +22,8 @@ function action()
     
     for(var i=0; i<bars.length; ++i)
     {
-	if(bars[i].type == 'h')
-	{
+    	if(bars[i].type == 'h')
+	    {
             if(keys[37]  &&  !check_bar[1]) // press left arrow
                 bars[i].dx = -8;             
             
@@ -42,7 +42,7 @@ function action()
             else if(keys[40]  &&  !check_bar[4]) // press down arrow
                 bars[i].dy = 8;
 
-	    else
+	        else
                 bars[i].dy = 0;
         }
     }

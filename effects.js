@@ -7,6 +7,7 @@ $(document).ready(function()
     });
 });
 
+
 function audio()
 {
     var snd = new Audio("blip.wav");
