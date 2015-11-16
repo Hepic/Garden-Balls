@@ -25,10 +25,16 @@ function action()
     	if(bars[i].type == 'h')
 	    {
             if(keys[37]  &&  !check_bar[1]) // press left arrow
-                bars[i].dx = -8;             
-            
+            {
+                bars[i].dx -= 0.5;             
+                bars[i].dx = Math.max(bars[i].dx, -8);
+            }
+
             else if(keys[39]  &&  !check_bar[2]) // press right arrow
-                bars[i].dx = 8;
+            {
+                bars[i].dx += 0.5;
+                bars[i].dx = Math.min(bars[i].dx, 8);
+            }
 
             else
                 bars[i].dx = 0;
@@ -37,10 +43,16 @@ function action()
 	else if(bars[i].type == 'v')
 	{
             if(keys[38]  &&  !check_bar[3]) // press up arrow
-                bars[i].dy = -8;               
-            
+            {
+                bars[i].dy -= 0.5;               
+                bars[i].dy = Math.max(bars[i].dy, -8);
+            }
+
             else if(keys[40]  &&  !check_bar[4]) // press down arrow
-                bars[i].dy = 8;
+            {
+                bars[i].dy += 0.5;
+                bars[i].dy = Math.min(bars[i].dy, 8);
+            }
 
 	        else
                 bars[i].dy = 0;

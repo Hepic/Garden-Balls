@@ -29,12 +29,34 @@ function collision_bar_ball()
         if(collision(bars[i].x, bars[i].y, bars[i].width, bars[i].height, ball_x, ball_y, ball_width, ball_height))
         {
             if(bars[i].type == 'h') // horizontal bar
+            {
                 ball.dy *= -1;
-
+                ball.dx += bars[i].dx;
+            }
+            
             else if(bars[i].type == 'v') // vertical bar
+            {
                 ball.dx *= -1;
+                ball.dy += bars[i].dy;
+            }
+            
+           
+           if(ball.dx < -5)
+                ball.dx = -5;
+           
+           else if(ball.dx > 5)
+                ball.dx = 5;
+
+           
+           if(ball.dy < -5)
+                ball.dy = -5;
+           
+           else if(ball.dy > 5)
+                ball.dy = 5;
+
 
             audio();
+            ++score;
         }
     }
 }

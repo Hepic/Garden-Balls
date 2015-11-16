@@ -26,7 +26,8 @@ function render()
     collision_bar_ball();
     ball_out_of_window();
     
-    show_time(W + 20, 30)
+    show_time(W + 20, 30);   
+    show_score(W + 20, 80);
     
     requestAnimationFrame(render);
 };
