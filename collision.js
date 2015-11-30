@@ -119,6 +119,42 @@ function collision_bar_ball()
 }
 
 
+function collision_bar_bar()
+{
+    var ret = [];
+
+    for(var i=0; i<bars.length; ++i)
+        for(var j=0; j<bars.length; ++j)
+        {
+            if(i == j)
+                continue;
+            
+            if(collision(bars[i].x, bars[i].y, bars[i].width, bars[i].height, bars[j].x, bars[j].y, bars[j].width, bars[j].height))
+            {
+                if(bars[i].type == 'h'  &&  bars[j].type == 'v')
+                {
+                    if(bars[i].x > bars[j].x  &&  bars[i].x < bars[j].x + bars[j].width)  
+                        ret[1] = true;
+
+                    else if(bars[i].x + bars[i].width > bars[j].x  &&  bars[i].x + bars[i].width < bars[j].x + bars[j].width)  
+                        ret[2] = true;
+                }
+
+                else if(bars[i].type == 'v'  &&  bars[j].type == 'h')
+                {
+                    if(bars[i].y > bars[j].y  &&  bars[i].y < bars[j].y + bars[j].height)  
+                        ret[3] = true;
+                
+                    else if(bars[i].y + bars[i].height > bars[j].y  &&  bars[i].y + bars[i].height < bars[j].y + bars[j].height)  
+                        ret[4] = true;
+                }
+             }
+        }
+
+    return ret;
+}
+
+
 function ball_out_of_window()
 {
     if(ball.x < 0  ||  ball.x > W  ||  ball.y < 0  ||  ball.y > H)

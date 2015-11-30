@@ -18,8 +18,13 @@ function action_key_up(e)
 
 function action()
 {
-    check_bar = bar_out_of_window(bars[i]);
+    check_bar = bar_out_of_window();
+    check_bar_1 = collision_bar_bar();   
     
+    for(var i=1; i<=4; ++i)
+        check_bar[i] |= check_bar_1[i];
+
+
     for(var i=0; i<bars.length; ++i)
     {
     	if(bars[i].type == 'h')
@@ -59,5 +64,6 @@ function action()
         }
     }
 };
+
 
 setInterval(action, 10);
