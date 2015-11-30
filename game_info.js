@@ -16,3 +16,16 @@ function show_time(x, y)
 
     time_sec += 2.5;
 }
+
+function show_pause_screen()
+{
+    ctx.beginPath();
+    ctx.rect(0, 0, W+W1, H);
+    ctx.fillStyle = 'grey';
+    ctx.fill();
+
+    ctx.font = '40pt Calibri';
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = 'blue';
+    ctx.strokeText('Game Paused', 420, 150);
+}

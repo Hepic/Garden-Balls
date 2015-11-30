@@ -7,6 +7,9 @@ var keys = [];
 
 function action_key_down(e)
 {
+    if(e.keyCode == 27)
+        isPaused = !isPaused;
+
     keys[e.keyCode] = true;
 }
 
@@ -19,7 +22,7 @@ function action_key_up(e)
 function action()
 {
     check_bar = bar_out_of_window(bars[i]);
-    
+
     for(var i=0; i<bars.length; ++i)
     {
     	if(bars[i].type == 'h')

@@ -2,11 +2,10 @@ $(document).ready(function()
 {
     $('#start_game').click(function()
     {
-	    render();
+	    start_render();
 	    $('#menuContainer').hide();
     });
 });
-
 
 function audio()
 {

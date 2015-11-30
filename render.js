@@ -11,6 +11,15 @@ function draw_background()
     ctx.fill();
 }
 
+function start_render()
+{
+    if(!isPaused)
+	render();
+    else
+	show_pause_screen();
+
+    requestAnimationFrame(start_render);
+}
 
 function render()
 {
@@ -28,13 +37,7 @@ function render()
     
     show_time(W + 20, 30);   
     show_score(W + 20, 80);
-    
-    requestAnimationFrame(render);
 };
 
-
 if(run_game)
-    render();
-
-
-
+    start_render();
