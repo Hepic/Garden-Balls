@@ -1,12 +1,14 @@
 addEventListener('keydown', action_key_down, false);
 addEventListener('keyup', action_key_up, false);
 
-
 var keys = [];
 
 
 function action_key_down(e)
 {
+    if(e.keyCode == 27)
+        isPaused = !isPaused;
+
     keys[e.keyCode] = true;
 }
 
@@ -23,7 +25,6 @@ function action()
     
     for(var i=1; i<=4; ++i)
         check_bar[i] |= check_bar_1[i];
-
 
     for(var i=0; i<bars.length; ++i)
     {

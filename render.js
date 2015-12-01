@@ -12,29 +12,45 @@ function draw_background()
 }
 
 
+function draw_pause_screen()
+{
+    ctx.beginPath();
+    ctx.rect(0, 0, W+W1, H);
+    ctx.fillStyle = 'grey';
+    ctx.fill();
+
+    ctx.font = '40pt Calibri';
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = 'blue';
+    ctx.strokeText('Game Paused', (W+W1)/2 - 120, H/2);
+}
+
+
 function render()
 {
-    ctx.clearRect(0, 0, W, H);   
-    
+    ctx.clearRect(0, 0, W, H);
+
     draw_background();
     draw_bars();
     move_bars();
-    
+
     ball.move();
     ball.draw();
 
     collision_bar_ball();
     ball_out_of_window();
-    
-    show_time(W + 20, 30);   
+
+    show_time(W + 20, 30);
     show_score(W + 20, 80);
-    
-    requestAnimationFrame(render);
 };
 
 
-if(run_game)
-    render();
+function render_window()
+{
+    if(!isPaused)
+        render();
+    else
+        draw_pause_screen();
 
-
-
+    requestAnimationFrame(render_window);
+}
