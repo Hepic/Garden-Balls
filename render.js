@@ -47,10 +47,16 @@ function render()
 
 function render_window()
 {
-    if(!isPaused)
-        render();
-    else
+    if(first_time)
+    {
+        ball.set_ball();
+        first_time = false;
+    }
+
+    if(isPaused)
         draw_pause_screen();
+    else
+        render();
 
     requestAnimationFrame(render_window);
 }

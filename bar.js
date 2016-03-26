@@ -37,7 +37,6 @@ Bar.prototype = {
 }
 
 
-
 var bars = [];
 
 bars.push(new Bar(W/3-40, 30, 'h'));

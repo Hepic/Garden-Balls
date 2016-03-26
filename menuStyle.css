@@ -1,23 +1,29 @@
 body
 {
     background-color: white;
-    
+
     margin: 0;
     padding: 0;
 }
 
 
-div#menuContainer
+div#menuContainer, div#menuOptions
 {
     position: absolute;
-    left: 35%;
+    left: 30%;
 
-    width: 30%;
+    width: 40%;
     height: 100%;
 
     background-color: orange;
-    
+
     overflow-x: hidden;
+}
+
+
+div#menuOptions
+{
+    display: none;
 }
 
 
@@ -27,7 +33,7 @@ div#menuContainer
 
     top: 15%;
     text-align: center;
-    
+
     font-size: 30px;
 
     display: block;
@@ -39,7 +45,59 @@ div#menuContainer
 #menuContainer span:hover
 {
     color: white;
-    
+
     transition: 0.5s;
     transform: rotate(-2deg);
+}
+
+
+#menuOptions section
+{
+    position: relative;
+    top: 10%;
+    left: 10%;
+
+    margin-bottom: 10%;
+}
+
+
+#menuOptions ul
+{
+    list-style-type: none;
+    cursor: pointer;
+}
+
+
+#menuOptions h2
+{
+    position: relative;
+    left: 10%;
+}
+
+
+#menuOptions ul li
+{
+    display: inline-block;
+}
+
+
+#levels ul li
+{
+    padding-left: 12%;
+}
+
+
+#ball_type ul li
+{
+    padding-left: 3%;
+}
+
+
+#menuOptions span#menu
+{
+    position: absolute;
+    top: 45%;
+    left: 37%;
+
+    cursor: pointer;
 }
