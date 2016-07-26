@@ -1,5 +1,7 @@
 $(document).ready(function()
 {
+    $('#ball_list #tennis_ball').add('#level_list #level_1').addClass('whiteColor');
+
     $('#start_game').click(function()
     {
         render_window();
@@ -21,21 +23,26 @@ $(document).ready(function()
     });
 
 
-    $('#menuOptions #ball_type #tennis_ball').click(function()
+    $('#menuOptions ul#level_list li').click(function()
     {
-        ball.type = 'tennis_ball';
+        $('#menuOptions ul#level_list li').each(function()
+        {
+            $(this).removeClass('whiteColor');
+        });
+
+        $(this).addClass('whiteColor');
     });
 
 
-    $('#menuOptions #ball_type #basket_ball').click(function()
+    $('#menuOptions ul#ball_list li').click(function()
     {
-        ball.type = 'basket_ball';
-    });
+        $('#menuOptions ul#ball_list li').each(function()
+        {
+            $(this).removeClass('whiteColor');
+        });
 
-
-    $('#menuOptions #ball_type #soccer_ball').click(function()
-    {
-        ball.type = 'soccer_ball';
+        $(this).addClass('whiteColor');
+        ball.type = $(this).attr('id');
     });
 });
 

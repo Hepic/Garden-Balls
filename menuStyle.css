@@ -81,6 +81,21 @@ div#menuOptions
 }
 
 
+.whiteColor
+{
+    color: white;
+}
+
+
+#menuOptions ul li:hover
+{
+    color: white;
+
+    transition: 0.5;
+    transform: rotate(-2deg);
+}
+
+
 #levels ul li
 {
     padding-left: 12%;
